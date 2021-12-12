@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>
+BINARY CALCULATOR
+</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+
+<title>Binary Calculator</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link type="text/css" rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<div id="wrapper">
+<header id="header">
+<h1>BINARY CALCULATOR</h1>
+</header>
+
+<div id="convert-options">
+<select id="converter-one">
+<option value="dec">In Decimal</option>
+<option value="bin">In Binary</option>
+</select> <!-- converter-one -->
+
+<select id="converter-two">
+<option value="dec">In Decimal</option>
+<option value="bin">In Binary</option>
+</select> <!-- converter-two -->
+</div> <!--convert-options-->
+
+<div id="input-container">
+<input id="first-input" class="inputs" type="number" placeholder="Enter First Value.."></input>
+
+<label id="operator-label">op</label>
+
+<input id="second-input" class="inputs" type="number" placeholder="Enter Second Value.."></input>
+
+</div> <!-- input-container -->
+
+<div id="warning-container">
+<label id="warn-input-one" class="warning" visibilty="hidden"></label>
+
+<label id="warn-operator" class="warning" visibilty="hidden"></label>
+
+<label id="warn-input-two" class="warning" visibility="hidden"></label>
+</div> <!---->
+
+<div id="btn-container">
+<div id="row-one" class="rows">
+
+<button id="plus" class="btn operator-btn" onclick="getOperator(this.id)">+</button> <!--plus-->
+<button id="and" class="btn operator-btn" onclick="getOperator(this.id)">&amp;</button> <!--and-->
+<button class="btn" onclick="window.location.reload()">Cl</button>
+
+</div> <!-- row-one -->
+
+<div id="row-two" class="rows">
+
+<button id="subtract" class="btn operator-btn" onclick="getOperator(this.id)">-</button> <!--subtract-->
+<button id="xor" class="btn operator-btn" onclick="getOperator(this.id)">^</button> <!--xor-->
+<button id="or" class="btn operator-btn" onclick="getOperator(this.id)">|</button> <!--or-->
+</div> <!-- row-two -->
+
+<div id="row-three" class="rows">
+
+<button id="multiply" class="btn operator-btn" onclick="getOperator(this.id)">×</button> <!--multiply-->
+<button id="divide" class="btn operator-btn" onclick="getOperator(this.id)">÷</button> <!--divide-->
+<button id="equal" class="btn" onclick="finalResult()">=</button> <!-- equal -->
+</div> <!-- row-three -->
+
+</div> <!-- btn-container -->
+<div id="result-values">
+<h3>RESULT TABLE</h3>
+</div> <!-- result-values -->
+<div id="result-container">
+<table>
+<tr>
+<th></th>
+<th>Decimal</th>
+<th>Binary</th>
+</tr>
+
+<tr>
+<td>Input 1:</td>
+<td><label id="input1-decimal">_</label></td>
+<td><label id="input1-binary">_</label></td>
+</tr>
+
+<tr>
+<td>Input 2:</td>
+<td><label id="input2-decimal">_</label></td>
+<td><label id="input2-binary">_</label></td>
+</tr>
+
+<tr>
+<td>Result:</td>
+<td><label id="result-decimal">_</label></td>
+<td><label id="result-binary">_</label></td>
+</tr>
+
+</table>
+</div> <!-- result-container -->
+
+</div> <!--wrapper-->
+<script src="script.js" type="text/javascript"></script>
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
